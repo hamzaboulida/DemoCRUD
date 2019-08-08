@@ -1,0 +1,34 @@
+<div class="col-md-6">
+  <table class="table table-striped">
+    <thead>
+  <tr>
+    <th>modelName</th>
+    <th>brand</th>
+    <th>engineCapacity</th>
+    <th>fuel</th>
+    <th>noOfSeats</th>
+    <th>colour</th>
+    <th>year</th>
+    <th>kmsDriven</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cardata">
+        <td>{{car.modelName}}</td>
+        <td>{{car.brand}}</td>
+        <td>{{car.engineCapacity}}</td>
+        <td>{{car.fuel}}</td>
+        <td>{{car.noOfSeats}}</td>
+        <td>{{car.colour}}</td>
+        <td>{{car.year}}</td>
+        <td>{{car.kmsDriven}}</td>
+        <td><button class="btn btn-danger" (click)="deleteCar(car.id)" routerLink='/cars' > Delete car</button></td>
+        <td><button id="btn"  class="btn btn-danger" [routerLink]="['/updatecar', car.id]" > Edit car</button></td>
+        </tr>
+  </tbody>
+  </table>
+
+
+</div>
+

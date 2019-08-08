@@ -1,0 +1,51 @@
+
+
+<div class="col-md-6">
+    <h2 class="text-center">Edit Car</h2>
+    <form (ngSubmit)="updatecar(voiture.id)" #contactForm="ngForm">
+      <div class="form-group">
+        <label for="modelName">modelName:</label>
+        <input type="modelName" [(ngModel)]="voiture.modelName" placeholder="voiture.modelName" name="modelName" class="form-control" id="modelName">
+      </div>
+
+      <div class="form-group">
+        <label for="brand">brand:</label>
+        <input [(ngModel)]="voiture.brand" placeholder="brand" name="brand" class="form-control" id="brand">
+      </div>
+
+      <div class="form-group">
+        <label for="engineCapacity">engineCapacity</label>
+        <input [(ngModel)]="voiture.engineCapacity" placeholder="engineCapacity" name="engineCapacity" class="form-control" id="engineCapacity">
+      </div>
+
+      <div class="form-group">
+        <label for="fuel">fuel:</label>
+        <input type="fuel" [(ngModel)]="voiture.fuel" placeholder="fuel" name="fuel" class="form-control" id="fuel">
+      </div>
+
+      <div class="form-group">
+        <label for="noOfSeats">noOfSeats:</label>
+        <input [(ngModel)]="voiture.noOfSeats" placeholder="noOfSeats" name="noOfSeats" class="form-control" id="noOfSeats">
+      </div>
+
+      <div class="form-group">
+        <label for="colour">colour</label>
+        <input [(ngModel)]="voiture.colour" placeholder="colour" name="colour" class="form-control" id="colour">
+      </div>
+      <div class="form-group">
+        <label for="year">year:</label>
+        <input type="year" [(ngModel)]="voiture.year" placeholder="year" name="year" class="form-control" id="year">
+      </div>
+
+      <div class="form-group">
+        <label for="kmsDriven">kmsDriven:</label>
+        <input [(ngModel)]="voiture.kmsDriven" placeholder="kmsDriven" name="kmsDriven" class="form-control" id="kmsDriven">
+      </div>
+
+      
+      <button type="submit" class="btn btn-success" (click)="updatecar(voiture.id , voiture)"  routerLink='/cars' >
+        editCar
+     </button>
+
+    </form>
+    </div>
